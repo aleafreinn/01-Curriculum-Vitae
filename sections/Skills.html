@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Skills | Alif Imran</title>
+        <link rel="icon" href="../assets/skill icon.png">
+        <style>
+            html {
+                position:relative;
+                height: auto;
+                width: auto;
+                background-color: #3d3d3d;
+            }
+
+            img {
+                width: 50px;
+                opacity: 0.5;
+                margin: 10px;
+                transition: opacity 0.15s ease-in-out;
+            }
+
+            p {
+                font-family: Avenir LT std;
+                font-size: 25px;
+                font-weight: 35;
+                color: rgb(255, 255, 255);
+            }
+
+            h2{
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 20px;
+                font-style: italic;
+                color: rgb(226, 201, 118);
+            }
+            img:hover {
+                opacity: 1;
+            }
+
+            .headContainer {
+                background-color: #3d3d3d;
+                margin: 20px;
+                display: block;
+                text-align: center;
+            }
+
+            .headContainer a{
+                float: left;
+                font-family: Avenir LT std;
+                font-size: 20px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                text-decoration: none;
+                padding: 14px 50px;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            .headContainer a:hover {
+                background-color: rgb(226, 201, 118);
+                color: #3d3d3d;
+            }
+
+            .headContainer a.active {
+                background-color: rgb(212, 163, 0);
+                color:#3d3d3d;
+            }
+
+            .headLine {
+                
+                background-color: rgb(212, 163, 0);
+                margin-left: 5%;
+                margin-right: 5%;
+                margin-top: 34px;
+                border: none;
+            }
+
+            .subSkillsContainer {
+                float: left;
+                width: 300px;
+                height: 500px;
+                margin: 50px;
+                text-align: center;
+                align-items: center;
+                padding-top: 15px;
+            }
+
+            .mainSkillsContainer {
+                display: block;
+                
+            }
+
+            .hide {
+                display: none;
+            }
+
+            
+            .imageHover:hover + .hide {
+                display: block;
+                opacity: 0.5;
+            }
+
+            .skillsLevel {
+                opacity: 1;
+                width: 300px;
+            }
+        </style>
+
+        <script>
+            function showVisible(id) {
+                let currentId = document.getElementById(id);
+                currentId.style.visibility = currentId.style.visibility === 'hidden' ? 'visible' : 'hidden';
+            }
+            function hoverFix(preId, fullId) {
+                let currPreId = document.getElementById(preId);
+                let currFullId = document.getElementById(fullId);
+                switch (currFullId.style.display) {
+                    case '':
+                        currFullId.style.display = 'none';
+                        currPreId.style.display = '';
+                        break;
+                    case 'none':
+                        currFullId.style.display = '';
+                        currPreId.style.display = 'none';
+                        break;
+                }
+                
+                 
+            }
+        </script>
+    </head>
+    <body>
+        <div class="headContainer">
+            <a href="../index.html">Intro</a>
+            <a href="./Professional_Experience.html">Professional Experience</a>
+            <a class="active" href="./Skills.html">Skills</a>
+            <a href="./Education.html">Education</a>
+            <a href="./Project.html">Projects</a>
+            <br />
+            <hr class="headLine" size="4px" />
+        </div>
+
+        <div class="mainSkillsContainer">
+            <div class="subSkillsContainer">
+                <div class="imageHover" onclick="hoverFix('excelDescPre','excelDescFull')">
+                    <img src="../assets/skills excel.png" alt="excel icon">
+                    <img src="../assets/skills vba.png" alt="vba icon">
+                </div>
+                
+                <div id="excelDescPre" class="hide">
+                    <p>Microsoft Excel and VBA Programming</p>
+                    <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
+                </div>
+                <div id="excelDescFull" style="display: none;">
+                    <p>Microsoft Excel and VBA Programming</p>
+                    <img class="skillsLevel" src="../assets/skillsLevel 4.png" alt="Skill Level 4">
+                    <h2>Advanced Level Cell Management and Programming</h2>
+                    <hr style="width: 85%"/>
+                </div>
+            </div>
+            <div class="subSkillsContainer">
+                <img class="imageHover" src="../assets/skills rstudio.png" alt="rstudio icon" onclick="hoverFix('rStuDescPre','rStuDescFull')">
+                <div id="rStuDescPre" class="hide">
+                    <p>R-Studio Software</p>
+                    <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
+                </div>
+                <div id="rStuDescFull" style="display: none;">
+                    <p>R-Studio Software</p>
+                    <img class="skillsLevel" src="../assets/skillsLevel 2.png" alt="Skill Level 2">
+                    <h2>Adequate Level Programming and Package-Dependent</h2>
+                    <hr style="width: 85%"/>
+                </div>
+            </div>
+            <div class="subSkillsContainer">
+                <div class="imageHover" onclick="hoverFix('adobeDescPre','adobeDescFull')">
+                    <img src="../assets/skills photoshop.png" alt="photoshop icon">
+                    <img src="../assets/skills after effects.png" alt="after effects icon">
+                    <img src="../assets/skills premiere pro.png" alt="premiere pro icon">
+                    <img src="../assets/skills vegas.png" alt="vegas icon">
+                </div>
+                <div id="adobeDescPre" class="hide">
+                    <p>Adobe Photo and <br>Video Editing Tools, and Vegas Pro</p>
+                    <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
+                </div>
+                <div id="adobeDescFull" style="display: none;">
+                    <p>Adobe Photo and <br>Video Editing Tools, and Vegas Pro</p>
+                    <img class="skillsLevel" src="../assets/skillsLevel 4.png" alt="Skill Level 4">
+                    <h2>Advanced Level of Editing and Creative Outputs using multiple tools</h2>
+                    <hr style="width: 85%"/>
+                </div>
+                
+            </div>
+            <div class="subSkillsContainer">
+                <img class="imageHover" src="../assets/skills cplus.png" alt="cplus2 icon" onclick="hoverFix('cPlus2DescPre','cPlus2DescFull')">
+                <div id="cPlus2DescPre" class="hide">
+                    <p>C++ Programming Language</p>
+                    <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
+                </div>
+                <div id="cPlus2DescFull" style="display: none;">
+                    <p>C++ Programming Language</p>
+                    <img class="skillsLevel" src="../assets/skillsLevel 2.png" alt="Skill Level 2">
+                    <h2>Knowledgeable Level Programming Productivity and Outputs</h2>
+                    <hr style="width: 85%"/>
+                </div>
+            </div>
+            <div class="subSkillsContainer">
+                <img class="imageHover" src="../assets/skills python.png" alt="python icon" onclick="hoverFix('pyDescPre','pyDescFull')">
+                <div id="pyDescPre" class="hide">
+                    <p>Python, Anaconda and Project Jupyter</p>
+                    <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
+                </div>
+                <div id="pyDescFull" style="display: none;">
+                    <p>Python, Anaconda and Project Jupyter</p>
+                    <img class="skillsLevel" src="../assets/skillsLevel 3.png" alt="Skill Level 3">
+                    <h2>Fair Level of Back-end Programming and Machine Learning Algorithm Computation</h2>
+                    <hr style="width: 85%"/>
+                </div>
+            </div>
+            <div class="subSkillsContainer">
+                <img class="imageHover" src="../assets/skills blender.png" alt="blender icon" onclick="hoverFix('blenderDescPre','blenderDescFull')">
+                <div id="blenderDescPre" class="hide">
+                    <p>Blender Software<br>(3D Modelling)</p>
+                    <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
+                </div>
+                <div id="blenderDescFull" style="display: none;">
+                    <p>Blender Software<br>(3D Modelling)</p>
+                    <img class="skillsLevel" src="../assets/skillsLevel 2.png" alt="Skill Level 2">
+                    <h2>Fair Level of Modelling with 3D Space Cinematography</h2>
+                    <hr style="width: 85%"/>
+                </div>
+            </div>
+            <div class="subSkillsContainer">
+                <img class="imageHover" src="../assets/skills javascript.png" alt="javascript icon" onclick="hoverFix('jsDescPre','jsDescFull')">
+                <div id="jsDescPre" class="hide">
+                    <p>Javascript Programming Language</p>
+                    <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
+                </div>
+                <div id="jsDescFull" style="display: none;">
+                    <p>Javascript Programming Language</p>
+                    <img class="skillsLevel" src="../assets/skillsLevel 2.png" alt="Skill Level 2">
+                    <h2>Knowledgeable Level of Back-end Programming in Website Development</h2>
+                    <hr style="width: 85%"/>
+                </div>
+            </div>
+            <div class="subSkillsContainer">
+                <div class="imageHover" onclick="hoverFix('htmlDescPre','htmlDescFull')">
+                    <img src="../assets/skills html.png" alt="html icon">
+                    <img src="../assets/skills css.png" alt="css icon">
+                </div>
+                <div id="htmlDescPre" class="hide" >
+                    <p>HTML and CSS</p>
+                    <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
+                </div>
+                <div id="htmlDescFull" style="display: none;">
+                    <p>HTML and CSS</p>
+                    <img class="skillsLevel" src="../assets/skillsLevel 2.png" alt="Skill Level 2">
+                    <h2>Adequate Level Using These Front-End Programming Languages Specified for Website Development</h2>
+                    <hr style="width: 85%"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

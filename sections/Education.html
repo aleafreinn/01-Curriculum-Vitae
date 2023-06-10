@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Education | Alif Imran</title>
+        <link rel="icon" href="../assets/Education icon.png">
+        <style>
+            html {
+                position:relative;
+                height: auto;
+                width: auto;
+                background-color: #3d3d3d;
+            }
+
+            button {
+                display: block;
+                border: 0px solid rgb(226, 201, 118);
+                color:#3d3d3d;
+                background-color:rgb(226, 201, 118);
+                font-family: Avenir LT Std;
+                font-weight: medium;
+                font-size: 45px;
+                transition: border 0.15s ease-in-out;
+            }
+
+            button:hover {
+                border: 15px solid rgb(226, 201, 118);
+            }
+
+            .headContainer {
+                background-color: #3d3d3d;
+                margin: 20px;
+                display: block;
+                text-align: center;
+            }
+
+            .headContainer a{
+                float: left;
+                font-family: Avenir LT std;
+                font-size: 20px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                text-decoration: none;
+                padding: 14px 50px;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            .headContainer a:hover {
+                background-color: rgb(226, 201, 118);
+                color: #3d3d3d;
+            }
+
+            .headContainer a.active {
+                background-color: rgb(212, 163, 0);
+                color:#3d3d3d;
+            }
+
+            .headLine {
+                
+                background-color: rgb(212, 163, 0);
+                margin-left: 5%;
+                margin-right: 5%;
+                margin-top: 34px;
+                border: none;
+            }
+
+            .mainBoxDetails {
+                height: 600px;
+                width: 900px;
+                background-color: rgb(49, 49, 49);
+                margin:0%;
+                padding: 30px;
+                border:10px solid rgb(226, 201, 118);
+                
+            }
+
+            .mainBoxDetails p{
+                font-family: Avenir LT Std;
+                font-size: 30px;
+                font-weight: 35;
+                color:rgb(212, 163, 0);
+                letter-spacing: 3px;
+            }
+
+            .mainBoxDetails h1{
+                font-family: Avenir LT Std;
+                font-size: 25px;
+                font-weight: 35;
+                color:white
+            }
+
+            .mainBoxDetails h2 {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 20px;
+                font-style:italic;
+                color:white
+            }
+
+            .vl {
+                border: none;
+                background-color: rgb(226, 201, 118);
+                width: 10px;
+                height: 50px;
+            }
+
+            .imageFrame {
+                width: 900px;
+                height: 300px;
+                background-color: rgb(226, 201, 118);
+                padding:0%;
+            }
+
+            .imageFrame img {
+                width: 300px;
+                border-left: 15px solid rgb(49, 49, 49);
+                border-right: 15px solid rgb(49, 49, 49);
+            }
+        </style>
+
+        <script>
+            function setVisibility(id) {
+                let currId = document.getElementById(id);
+                currId.style.display = currId.style.display === 'none' ? '' : 'none';
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="headContainer">
+            <a href="../index.html">Intro</a>
+            <a href="./Professional_Experience.html">Professional Experience</a>
+            <a href="./Skills.html">Skills</a>
+            <a class="active" href="./Education.html">Education</a>
+            <a href="./Project.html">Projects</a>
+            <br />
+            <hr class="headLine" size="4px" />
+        </div>
+
+    <div style="text-align:center;">
+            <center>
+                <button onclick="setVisibility('highSchoolBox')">High School</button>
+                <div class="mainBoxDetails" style="display: none" id="highSchoolBox">
+                    <img src="../assets/edu icon highschool.png" alt="logo smks5" style="width:50px">
+                    <div class="imageFrame">
+                        <img src="../assets/edu highschool pic.png" alt="smks5 pic">
+                    </div>
+                    <p style="margin-top: 25px;">" SMK SEKSYEN 5, WANGSA MAJU "</p>
+                    <h2>2012 - 2016</h2>
+                    <hr style="width: 40%;" />
+                    <h1><span style="color:rgb(212, 163, 0)">Course Taken: </span>Technology and Accounting</h1>
+                    <h1><span style="color:rgb(212, 163, 0)">Final Results: </span>Achieved 4A's on Sijil Pelajaran Malaysia</h1>
+                </div>
+                <div class="vl"></div>
+                <button onclick="setVisibility('diplomaBox')">Diploma</button>
+                <div class="mainBoxDetails" style="display: none" id="diplomaBox">
+                    <img src="../assets/edu icon diploma.png" alt="logo uitm" style="width:50px">
+                    <div class="imageFrame">
+                        <img src="../assets/edu diploma pic.png" alt="uitm s3 pic">
+                    </div>
+                    <p style="margin-top: 25px;">" UITM SEREMBAN 3, NEGERI SEMBILAN "</p>
+                    <h2>2017 - 2020</h2>
+                    <hr style="width: 40%;" />
+                    <h1><span style="color:rgb(212, 163, 0)">Course Taken: </span>Diploma in Actuarial Science</h1>
+                    <h1><span style="color:rgb(212, 163, 0)">Final Results: </span>Achieved in overall GPA of 3.78</h1>
+                </div>
+                <div class="vl"></div>
+                <button onclick="setVisibility('degreeBox')">Bachelor Degree</button>
+                <div class="mainBoxDetails" style="display: none" id="degreeBox">
+                    <img src="../assets/edu icon diploma.png" alt="logo uitm" style="width:50px">
+                    <div class="imageFrame">
+                        <img src="../assets/edu degree pic.png" alt="uitm shalam pic">
+                    </div>
+                    <p style="margin-top: 25px;">" UITM KAMPUS SHAH ALAM, SELANGOR "</p>
+                    <h2>2020 - 2022</h2>
+                    <hr style="width: 40%;" />
+                    <h1><span style="color:rgb(212, 163, 0)">Course Taken: </span>Bachelor Degree in Actuarial Science</h1>
+                    <h1><span style="color:rgb(212, 163, 0)">Final Results: </span>Achieved in overall GPA of 3.73</h1>
+                </div>
+            </center>
+        </div>
+    </body>
+</html>

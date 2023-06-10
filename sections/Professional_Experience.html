@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Professional Experience | Alif Imran</title>
+        <link rel="icon" href="../assets/ProExp icon.png">
+        <style>
+            html {
+                position: relative;
+                height: auto;
+                width: auto;
+                background-color: #3d3d3d;
+            }
+
+            img {
+                width: 400px;
+                border: 5px solid rgb(212, 163, 0);
+                padding: 5px;
+                margin: 30px;
+                border-radius: 15%;
+            }
+
+            .headContainer {
+                background-color: #3d3d3d;
+                margin: 20px;
+                display: block;
+                text-align: center;
+            }
+
+            .headContainer a{
+                float: left;
+                font-family: Avenir LT std;
+                font-size: 20px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                text-decoration: none;
+                padding: 14px 50px;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            .headContainer a:hover {
+                background-color: rgb(226, 201, 118);
+                color: #3d3d3d;
+            }
+
+            .headContainer a.active {
+                background-color: rgb(212, 163, 0);
+                color:#3d3d3d;
+            }
+
+            .headLine {
+                
+                background-color: rgb(212, 163, 0);
+                margin-left: 5%;
+                margin-right: 5%;
+                margin-top: 34px;
+                border: none;
+            }
+
+            .centerText {
+                text-align: center;
+            }
+
+            .titleExpand {
+                font-family: Avenir LT Std;
+                font-weight: 600;
+                font-size: 55px;
+                color:rgb(212, 163, 0);
+                background-color: #3d3d3d;
+                margin-bottom: 40px;
+                border: none;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            .titleExpand:hover {
+                
+                background-color: rgb(212, 163, 0);
+                color: #3d3d3d;
+                border-radius: 5px;
+            }
+
+            .centerText h2 {
+                font-family: Avenir LT Std;
+                font-weight: bold;
+                font-size: 35px;
+                color:rgb(226, 201, 118);
+            }
+
+            .centerText h3 {
+                font-family: Avenir LT Std;
+                font-weight: 300;
+                font-size: 27px;
+                color:rgb(255, 255, 255);
+            }
+
+            .bulletDetails {
+                font-family: Avenir LT Std;
+                font-weight: 300;
+                font-size: 20px;
+                color:rgb(255, 255, 255);
+            }
+
+            .centerImage {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        </style>
+        <script>
+            function setVisibility(id) {
+                let currentId = document.getElementById(id);
+                currentId.style.display = currentId.style.display === 'none' ? '' : 'none';
+            }
+        </script>
+    </head>
+    <!-- To develop navbar -->
+    <div class="headContainer">
+        <a href="../index.html">Intro</a>
+        <a class="active "href="./Professional_Experience.html">Professional Experience</a>
+        <a href="./Skills.html">Skills</a>
+        <a href="./Education.html">Education</a>
+        <a href="./Project.html">Projects</a>
+        <br />
+        <hr class="headLine" size="4px" />
+    </div>
+    
+    <div class="centerText">
+        <button class="titleExpand" onclick="setVisibility('graphicDesign')">Freelance in Graphics Designer</button>
+        <div id="graphicDesign" style="display: none">
+            <img src="../assets/freelance graphic design pic.jpg" class="centerImage" alt="Photo of Graphic Design">
+            <h2>
+                July 2018 - Current
+            </h2>
+            <h3>
+                Being an independent labourer in graphic design while pursuing Actuarial
+                <br> Science along the way.
+                <br><br>
+                Setting up personal wage per-task basis for multiple organisations, companies
+                <br>and events such as being a director and video editor for Bulan lnovasi handled
+                <br>by UiTM Cawangan Negeri Sembilan Authorities.
+            </h3>
+            <div class="bulletDetails">
+                <ul>
+                    <span style="color:rgb(226, 201, 118)">Company: </span>
+                    Self-Employed<br/>
+                    <span style="color:rgb(226, 201, 118)">Location: </span>
+                    Around Selangor and Kuala Lumpur<br/>
+                </ul>
+            </div>
+            <hr style="width: 90%"/>
+        </div>
+
+        <br />
+        <button class="titleExpand" onclick="setVisibility('dataEntry')">Data Entry</button>
+        <div id="dataEntry" style="display: none">
+            <img src="../assets/unisys pic.jpg" class="centerImage" alt="Photo of Unisys Building">
+            <h2>
+                September 2019 - November 2019
+            </h2>
+            <h3>
+                Managing in data in terms of keying into the system and sorting the data for
+                <br> false information at Unisys Malaysia Sdn. Bhd.
+                <br><br>
+                The first working experience that have been encountered while also suceededly
+                <br>manage to catch up the targeted Key Performance Indicator (KPI) within 2 to 3
+                <br>weeks.
+            </h3>
+            <div class="bulletDetails">
+                <ul>
+                    <span style="color:rgb(226, 201, 118)">Company: </span>
+                    Unisys Malaysia Sdn. Bhd.<br/>
+                    <span style="color:rgb(226, 201, 118)">Location: </span>
+                    Petaling Jaya, Selangor.<br/>
+                </ul>
+            </div>
+            <hr style="width: 90%"/>
+        </div>
+
+        <br />
+        <button class="titleExpand" onclick="setVisibility('riskPwc')">Internship: Risk Assurances Services (RAS)</button>
+        <div id="riskPwc" style="display: none">
+            <img src="../assets/pwc pic.jpg" class="centerImage" alt="Photo of Alif and Colleague in front of PwC Building">
+            <h2>
+                March 2022 - July 2022
+            </h2>
+            <h3>
+                A 16-week internship program at PriceWaterhouseCoopers (PwC) where the
+                <br> workscope comprises of various Risk Assurances blocks in which the task
+                <br> advocates on analysing high-profile company's system.
+                <br><br>
+                The RAS block that have been assigned cooperated with the non-disclosure
+                <br>high-profile client was IT General controls and Application Controls.
+            </h3>
+            <div class="bulletDetails">
+                <ul>
+                    <span style="color:rgb(226, 201, 118)">Company: </span>
+                    PriceWaterhouseCoopers (PwC) Malaysia<br/>
+                    <span style="color:rgb(226, 201, 118)">Location: </span>
+                    Kuala Lumpur Sentral, Wilayah Persekutuan Kuala Lumpur<br/>
+                </ul>
+            </div>
+            <hr style="width: 90%"/>
+        </div>
+
+        <br />
+        <button class="titleExpand" onclick="setVisibility('actuaryFwd')">Protege: Actuarial Modelling</button>
+        <div id="actuaryFwd" style="display: none">
+            <img src="../assets/fwd pic.jpg" class="centerImage" alt="Photo of Alif and Colleague in FWD Building">
+            <h2>
+                December 2022 - May 2023
+            </h2>
+            <h3>
+                A 1-year contract of PROTEGE position at FWD takaful where the
+                <br> workscope comprises analysing the company's Capital Adequacy Ratio (CAR)
+                <br> that advocates on eligibility to continue running the business.
+                <br><br>
+                The tasks that were assigned also testing and monitoring multiple sensitivities
+                <br>on future prediction of CAR for the base and "shock" scenarios while
+                <br>simultaneously generating the report to cater for group office.
+            </h3>
+            <div class="bulletDetails">
+                <ul>
+                    <span style="color:rgb(226, 201, 118)">Company: </span>
+                    FWD Takaful Malaysia<br/>
+                    <span style="color:rgb(226, 201, 118)">Location: </span>
+                    Menara Shell, KL Sentral, Wilayah Persekutuan Kuala Lumpur<br/>
+                </ul>
+            </div>
+            <hr style="width: 90%"/>
+        </div>
+    </div>
+</html>
