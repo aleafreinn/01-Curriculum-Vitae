@@ -1,0 +1,22 @@
+# 01-Curriculum-Vitae
+## https://aleafreinn.github.io/01-Curriculum-Vitae
+
+### Description:
+This is for the purpose of our first assignment that were made by our mentor (Atif Aiman Alserembani) in order to sharpen our HTML skills.
+Most of the CSS codes are not structured properly due to getting fimiliarised with the surface of front-end development.
+Hence, expect some less readability on the codes. If there is any improvements that can be made from my codes, feel free to fork the files.
+The low readability on the codes will be mitigated in future by adding comments on later versions.
+
+#### v1.0:
+- Initial deployment for public view on 10/6/2023.
+
+#### v1.1:
+- Fixed the issue with unrecognised font when deployed and hosted in github.io
+- The fonts-family that will be used is ***'Avenir'*** family.
+- Added through **'@font-face'** in CSS.
+
+#### v1.2:
+- Added some **transitions** for *Introduction Description*, *Drop down details for Professional Experiences*, *Box Details for Education* and *Sub-Container for Skills*.
+- Tweaked the *Navigation bar* from left-alligned to centered, with the addition to adding translucent background along the bar.
+- Added a background image for all pages and transforming the **background-color** some of the elements to **transparent** value in order to blend in with the background image.
+- For *Skills* page, added the description in order for the user to interact with the page easily.

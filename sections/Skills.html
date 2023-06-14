@@ -9,6 +9,11 @@
                 height: auto;
                 width: auto;
                 background-color: #3d3d3d;
+                background-image: url('../assets/diamond\ abstract\ pattern.png');
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-size: 100% auto;
+                
             }
 
             img {
@@ -36,21 +41,23 @@
             }
 
             .headContainer {
-                background-color: #3d3d3d;
-                margin: 20px;
+                background-color: #00000044;
+                margin: 20px -8px;
                 display: block;
                 text-align: center;
             }
 
             .headContainer a{
-                float: left;
+                position: relative;
+                display: inline-block;
                 font-family: 'Avenir Roman';
                 font-size: 20px;
                 color: rgb(255, 255, 255);
                 text-align: center;
                 text-decoration: none;
                 padding: 14px 50px;
-                transition: background-color 0.3s ease-in-out;
+                margin: 0px -2px;
+                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
             }
 
             .headContainer a:hover {
@@ -68,38 +75,50 @@
                 background-color: rgb(212, 163, 0);
                 margin-left: 5%;
                 margin-right: 5%;
-                margin-top: 34px;
+                margin-top: 0px;
                 border: none;
             }
 
             .subSkillsContainer {
-                float: left;
+                display:inline-block;
+                position: relative;
                 width: 300px;
                 height: 500px;
                 margin: 50px;
                 text-align: center;
                 align-items: center;
                 padding-top: 15px;
+                overflow: hidden;
             }
 
             .mainSkillsContainer {
                 display: block;
-                
+                text-align: center;
+                height: auto;
+                width: auto;
             }
 
             .hide {
-                display: none;
+                visibility: visible;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
             }
 
             
             .imageHover:hover + .hide {
-                display: block;
+                visibility: visible;
                 opacity: 0.5;
             }
 
             .skillsLevel {
                 opacity: 1;
                 width: 300px;
+            }
+
+            #excelDescFull, #rStuDescFull, #adobeDescFull, #cPlus2DescFull,
+            #pyDescFull, #blenderDescFull, #jsDescFull, #htmlDescFull {
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
             }
 
             @font-face {
@@ -119,21 +138,20 @@
         </style>
 
         <script>
-            function showVisible(id) {
-                let currentId = document.getElementById(id);
-                currentId.style.visibility = currentId.style.visibility === 'hidden' ? 'visible' : 'hidden';
-            }
+            
             function hoverFix(preId, fullId) {
                 let currPreId = document.getElementById(preId);
                 let currFullId = document.getElementById(fullId);
-                switch (currFullId.style.display) {
-                    case '':
-                        currFullId.style.display = 'none';
+                switch (currFullId.style.visibility) {
+                    case 'visible':
+                        currFullId.style.visibility = 'hidden';
+                        currFullId.style.opacity = '0';
                         currPreId.style.display = '';
                         break;
-                    case 'none':
-                        currFullId.style.display = '';
+                    case 'hidden':
                         currPreId.style.display = 'none';
+                        currFullId.style.visibility = 'visible';
+                        currFullId.style.opacity = '1';
                         break;
                 }
                 
@@ -142,7 +160,7 @@
         </script>
     </head>
     <body>
-        <div class="headContainer">
+        <nav class="headContainer">
             <a href="../index.html">Intro</a>
             <a href="./Professional_Experience.html">Professional Experience</a>
             <a class="active" href="./Skills.html">Skills</a>
@@ -150,9 +168,10 @@
             <a href="./Project.html">Projects</a>
             <br />
             <hr class="headLine" size="4px" />
-        </div>
+        </nav>
 
         <div class="mainSkillsContainer">
+            <p style="font-family:'Avenir Book';">" <span style="color:rgb(212, 163, 0)">CLICK</span> ONE OF THE ICONS FOR FULL INFORMATION "</p>
             <div class="subSkillsContainer">
                 <div class="imageHover" onclick="hoverFix('excelDescPre','excelDescFull')">
                     <img src="../assets/skills excel.png" alt="excel icon">
@@ -163,7 +182,7 @@
                     <p>Microsoft Excel and VBA Programming</p>
                     <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
                 </div>
-                <div id="excelDescFull" style="display: none;">
+                <div id="excelDescFull" style="visibility: hidden;">
                     <p>Microsoft Excel and VBA Programming</p>
                     <img class="skillsLevel" src="../assets/skillsLevel 4.png" alt="Skill Level 4">
                     <h2>Advanced Level Cell Management and Programming</h2>
@@ -176,7 +195,7 @@
                     <p>R-Studio Software</p>
                     <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
                 </div>
-                <div id="rStuDescFull" style="display: none;">
+                <div id="rStuDescFull" style="visibility: hidden;">
                     <p>R-Studio Software</p>
                     <img class="skillsLevel" src="../assets/skillsLevel 2.png" alt="Skill Level 2">
                     <h2>Adequate Level Programming and Package-Dependent</h2>
@@ -194,7 +213,7 @@
                     <p>Adobe Photo and <br>Video Editing Tools, and Vegas Pro</p>
                     <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
                 </div>
-                <div id="adobeDescFull" style="display: none;">
+                <div id="adobeDescFull" style="visibility: hidden;">
                     <p>Adobe Photo and <br>Video Editing Tools, and Vegas Pro</p>
                     <img class="skillsLevel" src="../assets/skillsLevel 4.png" alt="Skill Level 4">
                     <h2>Advanced Level of Editing and Creative Outputs using multiple tools</h2>
@@ -208,7 +227,7 @@
                     <p>C++ Programming Language</p>
                     <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
                 </div>
-                <div id="cPlus2DescFull" style="display: none;">
+                <div id="cPlus2DescFull" style="visibility: hidden;">
                     <p>C++ Programming Language</p>
                     <img class="skillsLevel" src="../assets/skillsLevel 2.png" alt="Skill Level 2">
                     <h2>Knowledgeable Level Programming Productivity and Outputs</h2>
@@ -221,7 +240,7 @@
                     <p>Python, Anaconda and Project Jupyter</p>
                     <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
                 </div>
-                <div id="pyDescFull" style="display: none;">
+                <div id="pyDescFull" style="visibility: hidden;">
                     <p>Python, Anaconda and Project Jupyter</p>
                     <img class="skillsLevel" src="../assets/skillsLevel 3.png" alt="Skill Level 3">
                     <h2>Fair Level of Back-end Programming and Machine Learning Algorithm Computation</h2>
@@ -234,7 +253,7 @@
                     <p>Blender Software<br>(3D Modelling)</p>
                     <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
                 </div>
-                <div id="blenderDescFull" style="display: none;">
+                <div id="blenderDescFull" style="visibility: hidden;">
                     <p>Blender Software<br>(3D Modelling)</p>
                     <img class="skillsLevel" src="../assets/skillsLevel 2.png" alt="Skill Level 2">
                     <h2>Fair Level of Modelling with 3D Space Cinematography</h2>
@@ -247,7 +266,7 @@
                     <p>Javascript Programming Language</p>
                     <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
                 </div>
-                <div id="jsDescFull" style="display: none;">
+                <div id="jsDescFull" style="visibility: hidden;">
                     <p>Javascript Programming Language</p>
                     <img class="skillsLevel" src="../assets/skillsLevel 2.png" alt="Skill Level 2">
                     <h2>Knowledgeable Level of Back-end Programming in Website Development</h2>
@@ -263,7 +282,7 @@
                     <p>HTML and CSS</p>
                     <img src="../assets/skillsLevel 0.png" alt="Skill Level 0" style="width: 300px">
                 </div>
-                <div id="htmlDescFull" style="display: none;">
+                <div id="htmlDescFull" style="visibility: hidden;">
                     <p>HTML and CSS</p>
                     <img class="skillsLevel" src="../assets/skillsLevel 2.png" alt="Skill Level 2">
                     <h2>Adequate Level Using These Front-End Programming Languages Specified for Website Development</h2>

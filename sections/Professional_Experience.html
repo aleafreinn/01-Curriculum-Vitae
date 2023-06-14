@@ -9,6 +9,10 @@
                 height: auto;
                 width: auto;
                 background-color: #3d3d3d;
+                background-image: url('../assets/diamond\ abstract\ pattern.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% auto;
             }
 
             img {
@@ -20,21 +24,23 @@
             }
 
             .headContainer {
-                background-color: #3d3d3d;
-                margin: 20px;
+                background-color: #00000044;
+                margin: 20px -8px;
                 display: block;
                 text-align: center;
             }
 
             .headContainer a{
-                float: left;
+                position: relative;
+                display: inline-block;
                 font-family: 'Avenir Roman';
                 font-size: 20px;
                 color: rgb(255, 255, 255);
                 text-align: center;
                 text-decoration: none;
                 padding: 14px 50px;
-                transition: background-color 0.3s ease-in-out;
+                margin: 0px -2px;
+                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
             }
 
             .headContainer a:hover {
@@ -52,7 +58,7 @@
                 background-color: rgb(212, 163, 0);
                 margin-left: 5%;
                 margin-right: 5%;
-                margin-top: 34px;
+                margin-top: 0px;
                 border: none;
             }
 
@@ -62,25 +68,23 @@
 
             .titleExpand {
                 font-family: 'Avenir Roman';
-                font-size: 55px;
-                color:rgb(212, 163, 0);
-                background-color: #3d3d3d;
+                font-size: 45px;
+                color: #E2C976;
+                background-color: transparent;
                 margin-bottom: 40px;
                 border: none;
-                transition: background-color 0.3s ease-in-out;
+                transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
             }
 
             .titleExpand:hover {
-                
-                background-color: rgb(212, 163, 0);
-                color: #3d3d3d;
-                border-radius: 5px;
+                color: white;
+                font-size: 55px;
             }
 
             .centerText h2 {
                 font-family: 'Avenir Black';
                 font-size: 35px;
-                color:rgb(226, 201, 118);
+                color:rgb(212, 163, 0)
             }
 
             .centerText h3 {
@@ -102,6 +106,11 @@
                 margin-right: auto;
             }
 
+            .centerText div{
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            }
+
             @font-face {
                 font-family: 'Avenir Roman';
                 src: url(../assets/font/AvenirLTStd-Roman.otf);
@@ -120,12 +129,13 @@
         <script>
             function setVisibility(id) {
                 let currentId = document.getElementById(id);
-                currentId.style.display = currentId.style.display === 'none' ? '' : 'none';
+                currentId.style.maxHeight = currentId.style.maxHeight === '0px' ? '900px' : '0px';
+                currentId.style.opacity = currentId.style.opacity === '0' ? '1' : '0';
             }
         </script>
     </head>
     <!-- To develop navbar -->
-    <div class="headContainer">
+    <nav class="headContainer">
         <a href="../index.html">Intro</a>
         <a class="active "href="./Professional_Experience.html">Professional Experience</a>
         <a href="./Skills.html">Skills</a>
@@ -133,11 +143,11 @@
         <a href="./Project.html">Projects</a>
         <br />
         <hr class="headLine" size="4px" />
-    </div>
+    </nav>
     
     <div class="centerText">
         <button class="titleExpand" onclick="setVisibility('graphicDesign')">Freelance in Graphics Designer</button>
-        <div id="graphicDesign" style="display: none">
+        <div id="graphicDesign" style="max-height: 0px; opacity: 0">
             <img src="../assets/freelance graphic design pic.jpg" class="centerImage" alt="Photo of Graphic Design">
             <h2>
                 July 2018 - Current
@@ -163,7 +173,7 @@
 
         <br />
         <button class="titleExpand" onclick="setVisibility('dataEntry')">Data Entry</button>
-        <div id="dataEntry" style="display: none">
+        <div id="dataEntry" style="max-height: 0px; opacity: 0">
             <img src="../assets/unisys pic.jpg" class="centerImage" alt="Photo of Unisys Building">
             <h2>
                 September 2019 - November 2019
@@ -189,7 +199,7 @@
 
         <br />
         <button class="titleExpand" onclick="setVisibility('riskPwc')">Internship: Risk Assurances Services (RAS)</button>
-        <div id="riskPwc" style="display: none">
+        <div id="riskPwc" style="max-height: 0px; opacity: 0">
             <img src="../assets/pwc pic.jpg" class="centerImage" alt="Photo of Alif and Colleague in front of PwC Building">
             <h2>
                 March 2022 - July 2022
@@ -215,7 +225,7 @@
 
         <br />
         <button class="titleExpand" onclick="setVisibility('actuaryFwd')">Protege: Actuarial Modelling</button>
-        <div id="actuaryFwd" style="display: none">
+        <div id="actuaryFwd" style="max-height: 0px; opacity: 0">
             <img src="../assets/fwd pic.jpg" class="centerImage" alt="Photo of Alif and Colleague in FWD Building">
             <h2>
                 December 2022 - May 2023

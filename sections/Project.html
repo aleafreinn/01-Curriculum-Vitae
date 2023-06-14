@@ -9,24 +9,30 @@
                 height: auto;
                 width: auto;
                 background-color: #3d3d3d;
+                background-image: url('../assets/diamond\ abstract\ pattern.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% auto;
             }
 
             .headContainer {
-                background-color: #3d3d3d;
-                margin: 20px;
+                background-color: #00000044;
+                margin: 20px -8px;
                 display: block;
                 text-align: center;
             }
 
             .headContainer a{
-                float: left;
+                position: relative;
+                display: inline-block;
                 font-family: 'Avenir Roman';
                 font-size: 20px;
                 color: rgb(255, 255, 255);
                 text-align: center;
                 text-decoration: none;
                 padding: 14px 50px;
-                transition: background-color 0.3s ease-in-out;
+                margin: 0px -2px;
+                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
             }
 
             .headContainer a:hover {
@@ -44,7 +50,7 @@
                 background-color: rgb(212, 163, 0);
                 margin-left: 5%;
                 margin-right: 5%;
-                margin-top: 34px;
+                margin-top: 0px;
                 border: none;
             }
 
@@ -82,7 +88,7 @@
     </head>
 
     <body>
-        <div class="headContainer">
+        <nav class="headContainer">
             <a href="../index.html">Intro</a>
             <a href="./Professional_Experience.html">Professional Experience</a>
             <a href="./Skills.html">Skills</a>
@@ -90,7 +96,7 @@
             <a class="active" href="./Project.html">Projects</a>
             <br />
             <hr class="headLine" size="4px" />
-        </div>
+        </nav>
 
         <div class="centeredText">
             <h1>The Impact of Climate Change Towards Claim Ratio<br />
