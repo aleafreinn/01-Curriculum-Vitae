@@ -27,8 +27,8 @@ The low readability on the codes will be mitigated in future by adding comments 
 ##
 #### v1.3:
 - Generated '.css' files and transferred the styling from '.html' to '.css' for each of the pages inside *styles* directory.
-![Hover presentation](./assets/readme/hover presentation.gif) ![alt text](https://github.com/aleafreinn/01-Curriculum-Vitae/blob/main/)
-
+  
+![hover presentation](https://github.com/aleafreinn/01-Curriculum-Vitae/blob/main/assets/readme/hover%20presentation.gif)
 - Overhauled the *Introduction Page* by:
 	1. Adding the *Interactive Banner* where the user can hover the mouse to it and shows *nickname*.
 	2. Adding the *Multilingual Greet Message* where it will constantly change the language of "Greetings!"
