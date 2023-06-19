@@ -3,202 +3,83 @@
   <head>
     <title>Introduction Page | Alif Imran</title>
     <link rel="icon" href="./assets/index icon.png">
-    <style>
-      html {
-        position: relative;
-        width: auto;
-        height: auto;
-        background: #3d3d3d;
-        border-radius: 50px;
-        background-image: url('./assets/diamond\ abstract\ pattern.png');
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: 100% auto;
-      }
-
-      a {
-        text-align: center;
-      }
-
-      button {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      
-
-      img {
-        width: 200px;
-        border: 5px solid rgb(212, 163, 0);
-        padding: 5px;
-        margin: 30px;
-        border-radius: 15%;
-      }
-
-
-      .centerImage {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .centerSelection {
-        text-align: center;
-      }
-
-      .mainLink {
-        background-color: transparent;
-        border: none;
-        font-family: 'Avenir Black';
-        font-size: 50pt;
-        text-decoration: none;
-        color: rgb(230, 195, 82);
-        transition: color 0.3s ease-in-out, font-size 0.2s ease-in-out;
-      }
-
-      .mainLink:hover {
-        color: white;
-        font-size: 55pt;
-      }
-
-      .selectionLink {
-        font-family: 'Avenir Roman';
-        font-size: 25pt;
-        text-decoration: none;
-        color: #3d3d3d;
-        background-color: rgb(212, 163, 0);
-        border: 10px solid rgb(212, 163, 0);
-        border-radius: 15px;
-        transition: border 0.3s ease-in-out;
-      }
-
-      .selectionLink:hover {
-        border: 20px solid rgb(212, 163, 0);
-        border-radius: 20px;
-      }
-
-      .contactInfoMain {
-        width: auto;
-        height: 60px;
-        text-align: center;
-        margin-bottom: 30px;
-        margin-top: -30px;
-      }
-
-      .contactInfo {
-        margin: 0px auto;
-        position: relative;
-        display: inline-block;
-      }
-
-      .contactInfo a{
-        text-decoration: none;
-        font-family: 'Avenir Roman';
-        font-size: 15pt;
-        color: white;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .contactInfo a:hover {
-        text-decoration: none;
-        font-family: 'Avenir Roman';
-        font-size: 15pt;
-        color: rgb(230, 195, 82);
-      }
-
-      .contactInfo a img{
-        border: none;
-        width: 50px;
-        padding: 0%;
-        margin-bottom: -18px;
-        margin-right: 0px;
-      }
-
-      .descInactiveBox {
-        background-color: transparent;
-        width: auto;
-        overflow: auto;
-        transition: all 0.3s ease-in-out;
-      }
-
-
-      #descIntro {
-        font-family: 'Avenir Book';
-        font-size: 10pt;
-        color: white;
-        text-align: center;
-      }
-
-      @font-face {
-        font-family: 'Avenir Roman';
-        src: url(./assets/font/AvenirLTStd-Roman.otf);
-      }
-
-      @font-face {
-        font-family: 'Avenir Book';
-        src: url(./assets/font/AvenirLTStd-Book.otf);
-      }
-
-      @font-face {
-        font-family: 'Avenir Black';
-        src: url(./assets/font/AvenirLTStd-Black.otf);
-      }
-    </style>
-
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
       function toggleHeight(id) {
         let currId = document.getElementById(id);
-        currId.style.height = currId.style.height === '0px' ? '100px' : '0px';
+        currId.style.maxHeight = currId.style.maxHeight === '0px' ? '125px' : '0px';
       }
+      
+      function setVisibility(){
+          let desc = document.getElementById('descIntro');
+
+          desc.style.display = desc.style.display === 'none' ? '' : 'none';
+      }
+
+
     </script>
   </head>
   <body>
-    <div>
-      <img src="./assets/Formal Pic white bg.jpg" class="centerImage" alt="Alif Imran Profile Picture"/>
-      <div>
-        <button class="mainLink" onclick="toggleHeight('descIntro')">Alif Imran Mohamad Azib</button>
-        <div id="descIntro" class="descInactiveBox" style="height: 0px;">
-          <h2 class="descInt" ><center>A graduated bachelor's of Actuarial Science student who wishes to pursue in Software Development
-          <br> and be productive with suitable practices in the industry as well as contributing quality outputs efficiently throughout the company.</center></h2>
-          
-        </div>
-        <div class="contactInfoMain">
-          <div class="contactInfo">
-            <a href="mailto:alifazib72">
-              <img src="./assets/email icon.png" alt="email icon">
-              alifazib72@gmail.com
-            </a>
-          </div>
-          <div class="contactInfo">
-            <a href="">
-              <img src="./assets/phone icon.png" alt="phone icon">
-              +60184003211
-            </a>
-          </div>
-          <div class="contactInfo">
-            <a href="https://www.linkedin.com/in/alif-imran-mohamad-azib-a28639226" target="_blank">
-              <img src="./assets/linkedin icon.png" alt="linkedin icon">
-              alif-imran-mohamad-azib
-            </a>
-          </div>
-        </div>
-        <hr style="background-color:rgb(231, 224, 199); border: none;" size="3px"/>
-        <br />
-        <div class="centerSelection">
-          <a href="./sections/Professional_Experience.html" class="selectionLink">Professional Experience</a>
-          <a href="./sections/Skills.html" class="selectionLink">Skills</a>
-          <a href="./sections/Education.html" class="selectionLink">Education</a>
-          <a href="./sections/Project.html" class="selectionLink">Projects</a>
-        </div>
-        <script>
-        function setVisibility(){
-            let desc = document.getElementById('descIntro');
+    <div class="bannerMain">
+      <img src="./assets/banner main - color.png" alt="banner color" class="banner-will-hide">
+      <img src="./assets/banner main - no color.png" alt="banner no color" class="banner-will-show">
+      <p id="nickname" class="banner-will-show">"<span style="color: rgb(230, 195, 82)">aleaf</span>reinn"</p>
+      <img src="./assets/banner main - model.png" alt="banner model">
+      <p id="realname" class="banner-will-hide">ALIF IMRAN MOHAMAD AZIB</p>
+    </div>
 
-            desc.style.display = desc.style.display === 'none' ? '' : 'none';
-        }
-        </script>
+    <section class="intro-container">
+      <p id="greeting" style="opacity:0;"></p>
+      <h1>I am <span class="name-border">Alif Imran</span></h1>
+      <h2>and this is where I will show <span style="color:rgb(230, 195, 82)">my perfection!</span></h2>
+      <h3>I'm on an exciting journey as an uprising software developer. I'm fueled by a deep curiosity and love for crafting innovative solutions through code. Whether it's creating sleek user interfaces or tackling complex algorithms, I thrive on turning ideas into reality.</h3>
+      <script>
+        let greetChange = $("#greeting");
+        const greetText = ['Greetings!', 'Salam!', 'ごあいさつ!', '!تحيات', '问候!'];
+        let greetIndex  = 0;
+
+        setInterval( () => {
+          greetChange.html(greetText[greetIndex]).fadeTo(500,1);
+          greetIndex++;
+          greetChange.delay(800).fadeTo(500,0);
+          if (greetIndex === 5) {greetIndex = 0};
+        }, 2100);
+      </script>
+    </section>
+    
+    <button class="mainLink" onclick="toggleHeight('descIntro')">My Vision in Corporate World</button>
+    <div id="descIntro" class="descInactiveBox" style="max-height: 0px;">
+      <h2 class="descInt" >I started off as a bachelor's of Actuarial Science student but wishes to pursue in Software Development and be productive with suitable practices in the industry as well as contributing quality outputs efficiently throughout the company.</h2>
+    </div>
+    <div class="contactInfoMain">
+      <div class="contactInfo">
+        <a href="mailto:alifazib72">
+          <img src="./assets/email icon.png" alt="email icon">
+          alifazib72@gmail.com
+        </a>
+      </div>
+      <div class="contactInfo">
+        <a href="">
+          <img src="./assets/phone icon.png" alt="phone icon">
+          +60184003211
+        </a>
+      </div>
+      <div class="contactInfo">
+        <a href="https://www.linkedin.com/in/alif-imran-mohamad-azib-a28639226" target="_blank">
+          <img src="./assets/linkedin icon.png" alt="linkedin icon">
+          alif-imran-mohamad-azib
+        </a>
       </div>
     </div>
+    <hr style="background-color:rgb(231, 224, 199); border: none; width: 85%;" size="3px"/>
+    <br />
+    <div class="centerSelection">
+      <a href="./sections/Professional_Experience.html" class="selectionLink">Professional Experience</a>
+      <a href="./sections/Skills.html" class="selectionLink">Skills</a>
+      <a href="./sections/Education.html" class="selectionLink">Education</a>
+      <a href="./sections/Project.html" class="selectionLink">Projects</a>
+    </div>
+    <br><br>
   </body>
 </html>

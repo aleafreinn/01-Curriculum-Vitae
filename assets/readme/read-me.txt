@@ -20,3 +20,14 @@ The low readability on the codes will be mitigated in future by adding comments 
 - Tweaked the *Navigation bar* from left-alligned to centered, with the addition to adding translucent background along the bar.
 - Added a background image for all pages and transforming the **background-color** some of the elements to **transparent** value in order to blend in with the background image.
 - For *Skills* page, added the description in order for the user to interact with the page easily.
+
+#### v1.3:
+- Generated '.css' files and transferred the styling from '.html' to '.css' for each of the pages inside *styles* directory.
+![Hover presentation](./assets/readme/hover presentation.gif)
+- Overhauled the *Introduction Page* by:
+	1. Adding the *Interactive Banner* where the user can hover the mouse to it and shows *nickname*.
+	2. Adding the *Multilingual Greet Message* where it will constantly change the language of "Greetings!"
+	3. Modified the *Main Header Name* and added description for "uprising software developer" message.
+	4. Removed the *Professional Picture* due to inserting the *Interactive Banner* as a substitute.
+	5. Minor tweaks to the '.html' script for improvement and maintainability.
+ 

@@ -1,0 +1,131 @@
+html {
+    position:relative;
+    height: auto;
+    width: auto;
+    background-color: #3d3d3d;
+    background-image: url('../assets/diamond\ abstract\ pattern.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100% auto;
+    
+}
+
+img {
+    width: 50px;
+    opacity: 0.5;
+    margin: 10px;
+    transition: opacity 0.15s ease-in-out;
+}
+
+p {
+    font-family: 'Avenir Roman';
+    font-size: 25px;
+    font-weight: 35;
+    color: rgb(255, 255, 255);
+}
+
+h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(226, 201, 118);
+}
+img:hover {
+    opacity: 1;
+}
+
+.headContainer {
+    background-color: #00000044;
+    margin: 20px -8px;
+    display: block;
+    text-align: center;
+}
+
+.headContainer a{
+    position: relative;
+    display: inline-block;
+    font-family: 'Avenir Roman';
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 50px;
+    margin: 0px -2px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.headContainer a:hover {
+    background-color: rgb(226, 201, 118);
+    color: #3d3d3d;
+}
+
+.headContainer a.active {
+    background-color: rgb(212, 163, 0);
+    color:#3d3d3d;
+}
+
+.headLine {
+    
+    background-color: rgb(212, 163, 0);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0px;
+    border: none;
+}
+
+.subSkillsContainer {
+    display:inline-block;
+    position: relative;
+    width: 300px;
+    height: 500px;
+    margin: 50px;
+    text-align: center;
+    align-items: center;
+    padding-top: 15px;
+    overflow: hidden;
+}
+
+.mainSkillsContainer {
+    display: block;
+    text-align: center;
+    height: auto;
+    width: auto;
+}
+
+.hide {
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.imageHover:hover + .hide {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+.skillsLevel {
+    opacity: 1;
+    width: 300px;
+}
+
+#excelDescFull, #rStuDescFull, #adobeDescFull, #cPlus2DescFull,
+#pyDescFull, #blenderDescFull, #jsDescFull, #htmlDescFull {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@font-face {
+    font-family: 'Avenir Roman';
+    src: url(../assets/font/AvenirLTStd-Roman.otf);
+}
+
+@font-face {
+    font-family: 'Avenir Book';
+    src: url(../assets/font/AvenirLTStd-Book.otf);
+}
+
+@font-face {
+    font-family: 'Avenir Black';
+    src: url(../assets/font/AvenirLTStd-Black.otf);
+}

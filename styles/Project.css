@@ -1,0 +1,80 @@
+html {
+    position:relative;
+    height: auto;
+    width: auto;
+    background-color: #3d3d3d;
+    background-image: url('../assets/diamond\ abstract\ pattern.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
+}
+
+.headContainer {
+    background-color: #00000044;
+    margin: 20px -8px;
+    display: block;
+    text-align: center;
+}
+
+.headContainer a{
+    position: relative;
+    display: inline-block;
+    font-family: 'Avenir Roman';
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 50px;
+    margin: 0px -2px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.headContainer a:hover {
+    background-color: rgb(226, 201, 118);
+    color: #3d3d3d;
+}
+
+.headContainer a.active {
+    background-color: rgb(212, 163, 0);
+    color:#3d3d3d;
+}
+
+.headLine {
+    
+    background-color: rgb(212, 163, 0);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0px;
+    border: none;
+}
+
+.centeredText {
+    text-align: center;
+}
+
+.centeredText h1{
+    font-family: 'Avenir Black';
+    font-size: 40px;
+    color: rgb(212, 163, 0);
+}
+
+.centeredText h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+@font-face {
+    font-family: 'Avenir Roman';
+    src: url(../assets/font/AvenirLTStd-Roman.otf);
+}
+
+@font-face {
+    font-family: 'Avenir Book';
+    src: url(../assets/font/AvenirLTStd-Book.otf);
+}
+
+@font-face {
+    font-family: 'Avenir Black';
+    src: url(../assets/font/AvenirLTStd-Black.otf);
+}
