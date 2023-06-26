@@ -4,10 +4,30 @@ html {
     height: auto;
     background: #3d3d3d;
     border-radius: 50px;
-    background-image: url('../assets/diamond\ abstract\ pattern.png');
-    background-repeat: no-repeat;
+    background-image: url('../assets/diamond\ abstract\ pattern\ v2.png');
+    background-repeat:repeat;
     background-attachment: scroll;
     background-size: 100% auto;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF44;
+    border-radius: 10px;
+    padding: 4px;
+    transition: all 0.15 ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #FFFFFF88;
+}
+
+::-webkit-scrollbar-corner {
+    display: none;
 }
 
 a {
@@ -23,12 +43,12 @@ button {
     position: relative;
     width: 1150px;
     height: 500px;
-    margin: 50px auto 25px;
+    margin: 0px auto 15px;
     border: 3px solid #00000088;
     border-radius: 25px;
     box-shadow: 2px 2px 30px #000000cc;
     overflow: hidden;
-    text-align: center;
+    transform: scale(0.9)
 }
 
 .bannerMain img {
@@ -98,7 +118,7 @@ button {
 }
 
 .intro-container h3 {
-    font-family: 'Avenir Book';
+    font-family: 'Louis George Cafe Light';
     font-size: 24px;
     color: rgb(230, 195, 82);
     margin: 0px 0px;
@@ -122,10 +142,6 @@ button {
     margin-right: auto;
 }
 
-.centerSelection {
-    text-align: center;
-}
-
 .mainLink {
     background-color: transparent;
     border: none;
@@ -139,6 +155,17 @@ button {
 .mainLink:hover {
     color: white;
     font-size: 55pt;
+    cursor: pointer;
+}
+
+
+.centerSelection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    min-height: 80px;
 }
 
 .selectionLink {
@@ -150,6 +177,7 @@ button {
     border: 10px solid rgb(212, 163, 0);
     border-radius: 15px;
     transition: border 0.3s ease-in-out;
+    display: inline-block;
 }
 
 .selectionLink:hover {
@@ -202,11 +230,370 @@ button {
     transition: all 0.3s ease-in-out;
     display: flex;
     justify-content: center;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .descInt {
     width: 800px;
     height: auto;
+}
+
+.main-flex-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.sub-flex-container {
+    box-sizing: border-box;
+    height: auto;
+    max-width: 27.5%;
+    flex-grow: 1;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.social-link {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-link p {
+    font-family: 'Louis George Cafe Light';
+    font-size: 30px;
+    color: rgb(231, 224, 199);
+}
+
+.social-link a {
+    text-decoration: none;
+    overflow: visible;
+    height: 32px;
+    font-family: 'Avenir Book';
+    font-size: 18px;
+    color: rgb(212, 163, 0);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 5px;
+    margin: 10px;
+    background-color: rgba(230, 195, 82, 0);
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out,
+                padding 0.3s ease-in-out,
+                color 0.3s ease-in-out;
+
+}
+.social-link a img {
+    filter: saturate(0%);
+    width: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-link a:hover {
+    background-color: rgba(230, 195, 82);
+    padding: 10px 15px;
+    color: #3d3d3d
+}
+
+.social-link a:hover > img {
+    filter: saturate(100%);
+    width: 80px;
+}
+
+.main-flex-container .main-sub {
+    width: 45%;
+    min-width: 25%;
+    height: auto;
+    border: 1px solid rgb(231, 224, 199);
+    border-top: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+    flex-grow: 1;
+    margin: 5px;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.specialisation-box {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+    gap: 10px;
+}
+
+.specialisation-box p {
+    font-family: 'Avenir Black';
+    font-size: 35px;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(45deg, rgb(255, 214, 79), rgb(223, 118, 92));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sub-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    border-radius: 15px;
+    min-width: 30%;
+    border: 1px solid #E6CF8688;
+    box-shadow: 0px 0px 20px #00000044;
+    margin: 10px;
+    font-family: 'Louis George Cafe';
+    font-size: 20px;
+    color: white;
+    background-color: #00000044;
+    overflow: hidden;
+}
+
+.github-style {
+    border: 1px solid #30363D;
+    background-color: #0D1117;
+    font-family: 'Hubot Sans';
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+.sub-container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E6CF8688;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: #E6CF86;
+    }
+}
+
+.github-header {
+    background-color: #010409;
+    border-bottom: 1px solid #30363D;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex-grow: 1;
+    &:hover {
+        background-color: #010409;
+    }
+}
+
+.sub-container-header img {
+    width: 50px;
+    margin: 15px;
+    filter: brightness(10%);
+}
+
+.github-header img {
+    filter: contrast(0) brightness(2);
+}
+
+.github-nav {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.github-nav-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    color: #FFFFFF;
+    margin: 10px 10px 0px;
+    padding-bottom: 5px;
+    font-family: Calibri;
+    font-weight: 200;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #010409;
+    border-bottom: 2px solid #f7816600;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: #3d3d3d88;
+    }
+}
+
+.git-active {
+    font-weight: 600;
+    border-bottom: 2px solid #f78166;
+}
+
+
+.github-nav-button img {
+    all: unset;
+    width: 20px;
+    filter: contrast(0) brightness(1.2);
+    margin: 5px;
+}
+
+.github-flex-fix {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github-element {
+    padding: 0px;
+    opacity: 0;
+    margin: 0px;
+    height: auto;
+    max-height: 0px;
+    transform: translateY(700px);
+    transition: all 0.3s ease-in-out;
+    overflow: scroll;
+}
+
+.git-element-active {
+    opacity: 1;
+    max-height: 450px;
+    transform: translateY(0px);
+}
+
+.github-overview-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+    font-family: Calibri;
+    font-size: 15px;
+    color: #FFFFFF;
+    gap: 5px;
+}
+
+.github-visit-button {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: visible;
+    position: relative;
+    background-color: #1f6feb;
+    width: 150px;
+    height: 50px;
+    font-family: 'Hubot Sans';
+    font-size: 15px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #124188;
+    text-decoration: none;
+}
+
+.github-visit-button .throbbling-effect {
+    position: absolute;
+    margin-top: 0px;
+    animation: throbbling 1s infinite;
+}
+
+.repository-item {
+    margin: 10px;
+    padding: 5px 20px;
+    position: relative;
+}
+
+.repository-item a {
+    font-family: Calibri;
+    font-weight: 800;
+    font-size: 25px;
+    color: #1f6feb;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.repository-item span {
+    font-size: 12px;
+    border: 1px solid #2e343b;
+    border-radius: 20px;
+    padding: 3px 5px;
+    color: #95a0af;
+    height: 100%;
+}
+
+
+.sub-container-header-desc {
+    color: #292929;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px;
+    max-width: 75%;
+}
+
+.github-desc {
+    color: #FFFFFF;
+}
+
+.gallery-wrap {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+
+.gallery-vid, .gallery-model {
+    box-sizing: border-box;
+    width: 600px;
+    height: 379.766px;
+    display: flex;
+    overflow-x: scroll;
+    padding: 35px;
+    border: 10px solid #FFFFFF44;
+    box-shadow: 0px 0px 25px #00000066;
+    align-items: center;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.gallery-vid div, .gallery-model div {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px;
+    flex: none;
+}
+
+.gallery-vid div img, .gallery-model div img {
+    width: 100%;
+    filter: grayscale(100%);
+    transform: scale(1);
+    box-shadow: 0px 0px 0px #000000;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        filter: grayscale(0%);
+        box-shadow: 0px 0px 25px #000000;
+        transform: scale(1.1);
+    }
 }
 
 #nickname {
@@ -235,11 +622,60 @@ button {
 }
 
 #descIntro {
-    font-family: 'Avenir Book';
+    font-family: 'Louis George Cafe Light';
     font-size: 10pt;
+    letter-spacing: 1px;
     color: white;
     text-align: center;
     margin-top: -20px;
+}
+
+#backBtnVid, #nextBtnVid, #backBtnModel, #nextBtnModel {
+    width: 50px;
+    margin: 40px;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+}
+
+#andrewLink {
+    all: unset;
+    color:rgb(173, 104, 0);
+    transition: color 0.3s ease-in-out;
+    &:hover {
+        color:rgb(209, 143, 0);
+        cursor: pointer;
+    }
+}
+
+#elementGithub {
+    height: 450px;
+    padding: 10px;
+    width: 100%;
+}
+
+#gitOverview {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+#gitOverview img {
+    border-radius: 100%;
+    width: 300px;
+    border: 3px solid #2e343b; 
+}
+
+#gitOverviewInfo img {
+    width: 20px;
+    filter: contrast(0) brightness(1.2);
+    border: none;
+    border-radius: 0px;
 }
 
 @font-face {
@@ -260,4 +696,24 @@ button {
 @font-face {
     font-family: 'ElRon Monospace';
     src: url('../assets/font/Elronmonospace.ttf');
+}
+
+@font-face {
+    font-family: 'Louis George Cafe Light';
+    src: url('../assets/font/Louis\ George\ Cafe\ Light.ttf');
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('../assets/font/Louis\ George\ Cafe.ttf');
+}
+
+@font-face {
+    font-family: 'Hubot Sans';
+    src: url('../assets/font/Hubot-Sans-Regular.otf');
+}
+
+@keyframes throbbling {
+    from {transfrom: scale(1); opacity: 1}
+    to {transform: scale(1.2); opacity: 0}
 }
