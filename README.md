@@ -35,4 +35,4 @@ The low readability on the codes will be mitigated in future by adding comments 
 	3. Modified the *Main Header Name* and added description for "uprising software developer" message.
 	4. Removed the *Professional Picture* due to inserting the *Interactive Banner* as a substitute.
 	5. Minor tweaks to the '.html' script for improvement and maintainability.
- 
+

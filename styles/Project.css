@@ -3,10 +3,30 @@ html {
     height: auto;
     width: auto;
     background-color: #3d3d3d;
-    background-image: url('../assets/diamond\ abstract\ pattern.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image: url('../assets/diamond\ abstract\ pattern\ v2.png');
+    background-repeat: repeat;
+    background-attachment: scroll;
     background-size: 100% auto;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF44;
+    border-radius: 10px;
+    padding: 4px;
+    transition: all 0.15 ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #FFFFFF88;
+}
+
+::-webkit-scrollbar-corner {
+    display: none;
 }
 
 .headContainer {
