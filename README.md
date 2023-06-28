@@ -1,5 +1,5 @@
 # 01-Curriculum-Vitae
-## https://aleafreinn.github.io/01-Curriculum-Vitae
+## https://whoisaleafreinn-vitae.pages.dev/
 
 ### Description:
 This is for the purpose of our first assignment that were made by our mentor (Atif Aiman Alserembani) in order to sharpen our HTML skills.
